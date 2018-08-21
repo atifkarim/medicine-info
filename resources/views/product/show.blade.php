@@ -29,7 +29,7 @@
                         <i class="fa fa-circle-o bg-blue"></i>
                         <div class="timeline-item">
                             <h3 class="timeline-header"><a href="#">{{ trans('validation.attributes.generic') }}:</a>
-                                <a href="{{ route('search.index',['type' => 'generic', 'id' => $entity->id]) }}">
+                                <a href="{{ route('search.index',['type' => 'generic', 'id' => $entity->generic->id]) }}">
                                     {{ ucfirst($entity->generic->name) }}
                                 </a>
                             </h3>
