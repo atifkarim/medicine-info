@@ -19,7 +19,7 @@ class SubDiseases extends Model
     // protected $primaryKey = 'id';
      public $timestamps = false;
     // protected $guarded = ['id'];
-    protected $fillable = ['name', 'diseases_id', 'symptom', 'cause', 'treatment'];
+    protected $fillable = ['name', 'diseases_id', 'symptom', 'causes', 'treatment'];
     // protected $hidden = [];
     // protected $dates = [];
 

@@ -10,7 +10,7 @@
                     <!-- timeline time label -->
                     <li class="time-label">
                       <span class="bg-red">
-                        {{ trans('validation.attributes.generic') }} :: {{ ucfirst($entity->name) }}
+                        {{ trans('validation.attributes.diseases') }} :: {{ ucfirst($entity->name) }}
                       </span>
                     </li>
                     <li>

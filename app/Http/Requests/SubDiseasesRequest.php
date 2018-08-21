@@ -10,9 +10,10 @@ class SubDiseasesRequest extends FormRequest
     protected $subDiseasesId = null;
     public function __construct()
     {
-        if (!empty(\Route::current()->parameters['subdiseases'])) {
-            $this->subDiseasesId = intval(\Route::current()->parameters['subdiseases']);
+        if (!empty(\Route::current()->parameters['subdisease'])) {
+            $this->subDiseasesId = intval(\Route::current()->parameters['subdisease']);
         }
+
     }
     public function authorize()
     {
