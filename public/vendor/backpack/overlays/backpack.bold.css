@@ -38,7 +38,7 @@ body[class^='skin-'] .sidebar-menu>li>a {
 
 body {
 	font-size: 15px;
-	font-weight: 300;
+	/*font-weight: 300;*/
 }
 
 .logo-lg b {
