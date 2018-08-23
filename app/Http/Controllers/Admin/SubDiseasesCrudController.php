@@ -33,7 +33,7 @@ class SubDiseasesCrudController extends CrudController
             ], [
                 // 1-n relationship
                 'label' => trans('validation.attributes.diseases'), // Table column heading
-                'type' => "select2_ajax_generic",
+                'type' => "select2",
                 'name' => 'diseases_id', // the column that contains the ID of that connected entity;
                 'entity' => 'diseases', // the method that defines the relationship in your Model
                 'attribute' => "name", // foreign key attribute that is shown to user,

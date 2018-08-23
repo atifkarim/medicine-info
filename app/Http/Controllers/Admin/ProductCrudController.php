@@ -33,7 +33,7 @@ class ProductCrudController extends CrudController
             ], [
                 // 1-n relationship
                 'label' => trans('validation.attributes.brand'), // Table column heading
-                'type' => "select2_ajax_generic",
+                'type' => "select2",
                 'name' => 'brand_id', // the column that contains the ID of that connected entity;
                 'entity' => 'brand', // the method that defines the relationship in your Model
                 'attribute' => "name", // foreign key attribute that is shown to user,
@@ -43,7 +43,7 @@ class ProductCrudController extends CrudController
             ], [
                 // 1-n relationship
                 'label' => trans('validation.attributes.generic'), // Table column heading
-                'type' => "select2_ajax_generic",
+                'type' => "select2",
                 'name' => 'generic_id', // the column that contains the ID of that connected entity;
                 'entity' => 'generic', // the method that defines the relationship in your Model
                 'attribute' => "name", // foreign key attribute that is shown to user,
