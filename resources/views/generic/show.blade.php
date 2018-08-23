@@ -9,12 +9,16 @@
                 <table class="table table-bordered">
                     <tbody>
                         <tr>
-                            <th>Medicine</th>
+                            <th>{{ trans('validation.attributes.medicine') }}</th>
+                            <th>{{ trans('validation.attributes.brand') }}</th>
+                            <th>{{ trans('validation.attributes.generic') }}</th>
                             <th style="width: 40px">Details</th>
                         </tr>
                     @foreach($products as $key => $product)
                         <tr>
                             <td>{{ ucfirst($product->name) }}</td>
+                            <td>{{ ucfirst($product->brand->name) }}</td>
+                            <td>{{ ucfirst($product->generic->name) }}</td>
                             <td><a href="{{ route('search.index', ['type' => 'medicine', 'id' => $product->id]) }}"><span class="badge bg-blue">View</span></a></td>
                         </tr>
                     @endforeach
