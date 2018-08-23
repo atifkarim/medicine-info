@@ -19,7 +19,7 @@ class Generic extends Model
     // protected $primaryKey = 'id';
      public $timestamps = false;
     // protected $guarded = ['id'];
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'available_in_pregnancy', 'side_effect', 'alert'];
     // protected $hidden = [];
     // protected $dates = [];
 
@@ -34,6 +34,11 @@ class Generic extends Model
     | RELATIONS
     |--------------------------------------------------------------------------
     */
+
+    public function sub_diseases()
+    {
+        return $this->belongsToMany(SubDiseases::class);
+    }
 
     /*
     |--------------------------------------------------------------------------

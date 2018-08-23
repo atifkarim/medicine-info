@@ -19,7 +19,7 @@ class Product extends Model
     // protected $primaryKey = 'id';
      public $timestamps = false;
     // protected $guarded = ['id'];
-    protected $fillable = ['name', 'available_in_pregnancy', 'side_effect', 'alert', 'brand_id', 'generic_id'];
+    protected $fillable = ['name', 'brand_id', 'generic_id'];
     // protected $hidden = [];
     // protected $dates = [];
 

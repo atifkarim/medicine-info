@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Generic;
+use App\Models\SubDiseases;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 
 use App\Http\Requests\GenericRequest as StoreRequest;
@@ -22,10 +23,32 @@ class GenericCrudController extends CrudController
 
     private function setupCrudFields()
     {
-        $this->crud->addField([
-            'label' => trans('validation.attributes.name'),
-            'name' => 'name' ,
-            'type' => 'text'
+        $this->crud->addFields([
+            [
+                'label' => trans('validation.attributes.name'),
+                'name' => 'name' ,
+                'type' => 'text'
+            ], [
+                'label' => trans('validation.attributes.diseases'),
+                'type' => 'select2_multiple',
+                'name' => 'sub_diseases', // the method that defines the relationship in your Model
+                'entity' => 'sub_diseases', // the method that defines the relationship in your Model
+                'attribute' => 'name', // foreign key attribute that is shown to user
+                'model' => SubDiseases::class, // foreign key model
+                'pivot' => true, // on create&update, do you need to add/delete pivot table entries?
+            ], [
+                'label' => trans('validation.attributes.available_in_pregnancy'),
+                'name' => 'available_in_pregnancy',
+                'type' => 'checkbox'
+            ], [
+                'label' => trans('validation.attributes.side_effect'),
+                'name' => 'side_effect',
+                'type' => 'wysiwyg'
+            ], [
+                'label' => trans('validation.attributes.alert'),
+                'name' => 'alert',
+                'type' => 'wysiwyg'
+            ]
         ]);
     }
 

@@ -38,12 +38,6 @@
                     <li>
                         <i class="fa fa-circle-o bg-blue"></i>
                         <div class="timeline-item">
-                            <h3 class="timeline-header"><a href="#">{{ trans('validation.attributes.available_in_pregnancy') }}</a> {{ $entity->available_in_pregnancy ? 'Yes' : 'No' }}</h3>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fa fa-circle-o bg-blue"></i>
-                        <div class="timeline-item">
                             <h3 class="timeline-header"><a href="#">{{ trans('validation.attributes.diseases') }}</a> </h3>
                             <div class="timeline-body">
                                 <ul>
@@ -53,24 +47,6 @@
                                     </a>
                                 @endforeach
                                 </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fa fa-circle-o bg-blue"></i>
-                        <div class="timeline-item">
-                            <h3 class="timeline-header"><a href="#">{{ trans('validation.attributes.side_effect') }}</a> </h3>
-                            <div class="timeline-body">
-                                {!! $entity->side_effect !!}
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fa fa-circle-o bg-blue"></i>
-                        <div class="timeline-item">
-                            <h3 class="timeline-header"><a href="#">{{ trans('validation.attributes.alert') }}</a> </h3>
-                            <div class="timeline-body">
-                                {!! $entity->alert !!}
                             </div>
                         </div>
                     </li>
