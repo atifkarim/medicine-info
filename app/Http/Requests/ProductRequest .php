@@ -25,6 +25,7 @@ class ProductRequest extends FormRequest
         $rules['name'] = 'required|min:1|max:255|unique:products,name';
         $rules['brand_id'] = 'required';
         $rules['generic_id'] = 'required';
+        $rules['type_id'] = 'required';
 
         if($this->productId)
         {

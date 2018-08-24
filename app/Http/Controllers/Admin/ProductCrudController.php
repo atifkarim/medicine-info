@@ -25,11 +25,19 @@ class ProductCrudController extends CrudController
 
     private function setupCrudFields()
     {
+        $types = config('medicine.types');
+
         $this->crud->addFields([
             [
                 'label' => trans('validation.attributes.name'),
                 'name' => 'name' ,
                 'type' => 'text'
+            ], [
+                'name' => 'type_id',
+                'label' => trans('validation.attributes.type'),
+                'type' => 'select2_from_array',
+                'options' => $types,
+                'allows_null' => true
             ], [
                 // 1-n relationship
                 'label' => trans('validation.attributes.brand'), // Table column heading
@@ -59,7 +67,7 @@ class ProductCrudController extends CrudController
         $this->crud->addColumns([
             [
                 'label' => trans('validation.attributes.name'),
-                'name' => 'name' ,
+                'name' => 'medicine_name' ,
                 'type' => 'text'
             ], [
                 'label' => trans('validation.attributes.brand'), // Table column heading

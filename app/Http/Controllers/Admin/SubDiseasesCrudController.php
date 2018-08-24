@@ -45,7 +45,7 @@ class SubDiseasesCrudController extends CrudController
                 'type' => 'select2_multiple',
                 'name' => 'products', // the method that defines the relationship in your Model
                 'entity' => 'products', // the method that defines the relationship in your Model
-                'attribute' => 'name', // foreign key attribute that is shown to user
+                'attribute' => 'medicine_name', // foreign key attribute that is shown to user
                 'model' => Product::class, // foreign key model
                 'pivot' => true, // on create&update, do you need to add/delete pivot table entries?
             ], [

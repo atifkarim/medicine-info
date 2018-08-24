@@ -155,7 +155,8 @@ return [
         'treatment'                 => 'Treatment',
         'investigation'             => 'Investigation',
         'main_diseases'             => 'Main Diseases',
-        'medicine'                  => 'Medicine'
+        'medicine'                  => 'Medicine',
+        'type'                      => 'Type'
     ],
 
 ];

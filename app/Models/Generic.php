@@ -19,7 +19,7 @@ class Generic extends Model
     // protected $primaryKey = 'id';
      public $timestamps = false;
     // protected $guarded = ['id'];
-    protected $fillable = ['name', 'available_in_pregnancy', 'side_effect', 'alert'];
+    protected $fillable = ['name', 'pregnancy_id', 'side_effect', 'alert'];
     // protected $hidden = [];
     // protected $dates = [];
 
@@ -51,6 +51,12 @@ class Generic extends Model
     | ACCESORS
     |--------------------------------------------------------------------------
     */
+
+    public function getPregnancyTypeAttribute()
+    {
+        $type = config('medicine.pregnancy_types.' . $this->pregnancy_id );
+        return $type ?? 'N/A';
+    }
 
     /*
     |--------------------------------------------------------------------------

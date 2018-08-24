@@ -11,7 +11,7 @@
                     <li>
                         <i class="fa fa-circle-o bg-blue"></i>
                         <div class="timeline-item">
-                            <h3 class="timeline-header"><a href="#">{{ trans('validation.attributes.available_in_pregnancy') }}</a> {{ $entity->available_in_pregnancy ? 'Yes' : 'No' }}</h3>
+                            <h3 class="timeline-header"><a href="#">{{ trans('validation.attributes.available_in_pregnancy') }}</a> {{ $entity->pregnancy_type }}</h3>
                         </div>
                     </li>
                     <li>
@@ -67,7 +67,7 @@
                         </tr>
                     @foreach($products as $key => $product)
                         <tr>
-                            <td>{{ ucfirst($product->name) }}</td>
+                            <td>{{ ucfirst($product->medicine_name) }}</td>
                             <td>{{ ucfirst($product->brand->name) }}</td>
                             <td><a href="{{ route('search.index', ['type' => 'medicine', 'id' => $product->id]) }}"><span class="badge bg-blue">View</span></a></td>
                         </tr>

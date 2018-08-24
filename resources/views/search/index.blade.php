@@ -68,6 +68,7 @@
             $('.type').on('change', function() {
                 type = $(this).val();
                 $('.entity').text(type).css('text-transform', 'capitalize');
+                $(".entity-ajax").val('').trigger('change');
                 changeDiseasesToSubDiseases();
             });
 

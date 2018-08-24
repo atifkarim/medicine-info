@@ -23,6 +23,7 @@ class GenericCrudController extends CrudController
 
     private function setupCrudFields()
     {
+        $pregnancy_types = config('medicine.pregnancy_types');
         $this->crud->addFields([
             [
                 'label' => trans('validation.attributes.name'),
@@ -37,9 +38,11 @@ class GenericCrudController extends CrudController
                 'model' => SubDiseases::class, // foreign key model
                 'pivot' => true, // on create&update, do you need to add/delete pivot table entries?
             ], [
+                'name' => 'pregnancy_id',
                 'label' => trans('validation.attributes.available_in_pregnancy'),
-                'name' => 'available_in_pregnancy',
-                'type' => 'checkbox'
+                'type' => 'select2_from_array',
+                'options' => $pregnancy_types,
+                'allows_null' => true
             ], [
                 'label' => trans('validation.attributes.side_effect'),
                 'name' => 'side_effect',

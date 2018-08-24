@@ -33,7 +33,7 @@
                                 <ul>
                                     @foreach($entity->products as $key => $product)
                                         <a href="{{ route('search.index',['type' => 'medicine', 'id' => $product->id]) }}">
-                                            <li>{{ ucfirst($product->name) }}</li>
+                                            <li>{{ ucfirst($product->medicine_name) }}</li>
                                         </a>
                                     @endforeach
                                 </ul>

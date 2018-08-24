@@ -151,6 +151,7 @@ class GlobalSearchController extends Controller {
 
             case 'medicine':
                 $result = $this->searchMedicine($term, $request);
+                $displayAttr = 'medicine_name';
                 break;
 
             default:

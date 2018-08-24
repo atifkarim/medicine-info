@@ -16,7 +16,7 @@ class CreateGenericsTable extends Migration
         Schema::create('generics', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->boolean('available_in_pregnancy')->default(false);
+            $table->tinyInteger('pregnancy_id')->nullable();
             $table->text('side_effect')->nullable();
             $table->text('alert')->nullable();
         });

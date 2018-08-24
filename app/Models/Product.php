@@ -19,7 +19,7 @@ class Product extends Model
     // protected $primaryKey = 'id';
      public $timestamps = false;
     // protected $guarded = ['id'];
-    protected $fillable = ['name', 'brand_id', 'generic_id'];
+    protected $fillable = ['name', 'brand_id', 'generic_id', 'type_id'];
     // protected $hidden = [];
     // protected $dates = [];
 
@@ -61,6 +61,12 @@ class Product extends Model
     | ACCESORS
     |--------------------------------------------------------------------------
     */
+
+    public function getMedicineNameAttribute()
+    {
+        $type = config('medicine.types.' . $this->type_id );
+        return $type ? $type . '. '. $this->name :  $this->name;
+    }
 
     /*
     |--------------------------------------------------------------------------

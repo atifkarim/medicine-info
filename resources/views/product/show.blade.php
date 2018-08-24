@@ -10,13 +10,13 @@
                     <!-- timeline time label -->
                     <li class="time-label">
                       <span class="bg-red">
-                        {{ trans('validation.attributes.medicine') }} :: {{ ucfirst($entity->name) }}
+                        {{ trans('validation.attributes.medicine') }} :: {{ ucfirst($entity->medicine_name) }}
                       </span>
                     </li>
                     <li>
                         <i class="fa fa-circle-o bg-blue"></i>
                         <div class="timeline-item">
-                            <h3 class="timeline-header"><a href="#">{{ trans('validation.attributes.name') }}:</a> {{ ucfirst($entity->name) }}</h3>
+                            <h3 class="timeline-header"><a href="#">{{ trans('validation.attributes.name') }}:</a> {{ ucfirst($entity->medicine_name) }}</h3>
                         </div>
                     </li>
                     <li>
