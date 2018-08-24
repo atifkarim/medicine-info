@@ -47,7 +47,8 @@ class ProductCrudController extends CrudController
                 'attribute' => "name", // foreign key attribute that is shown to user,
                 'query_params' => [
                     'entity' => 'brand'
-                ]
+                ],
+                'allows_null' => true
             ], [
                 // 1-n relationship
                 'label' => trans('validation.attributes.generic'), // Table column heading
@@ -57,7 +58,8 @@ class ProductCrudController extends CrudController
                 'attribute' => "name", // foreign key attribute that is shown to user,
                 'query_params' => [
                     'entity' => 'generic'
-                ]
+                ],
+                'allows_null' => true
             ]
         ]);
     }

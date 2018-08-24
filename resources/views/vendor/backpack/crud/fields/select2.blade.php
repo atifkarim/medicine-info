@@ -13,6 +13,10 @@
         @include('crud::inc.field_attributes', ['default_class' =>  'form-control select2_field'])
         >
 
+        @if (isset($field['allows_null']) && $field['allows_null']==true)
+            <option value="">-</option>
+        @endif
+
         @if ($entity_model::isColumnNullable($field['name']))
             <option value="">-</option>
         @endif

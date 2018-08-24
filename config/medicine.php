@@ -4,7 +4,7 @@ return [
     'types' => [
         1 => 'Tab',
         2 => 'Cap',
-        3 => 'Syr',
+        3 => 'Syp',
         4 => 'Inj',
         5 => 'P. Drop',
         6 => 'Sus',

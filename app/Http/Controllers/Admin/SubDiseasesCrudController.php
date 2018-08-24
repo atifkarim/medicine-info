@@ -39,7 +39,8 @@ class SubDiseasesCrudController extends CrudController
                 'attribute' => "name", // foreign key attribute that is shown to user,
                 'query_params' => [
                     'entity' => 'diseases'
-                ]
+                ],
+                'allows_null' => true
             ], [
                 'label' => trans('validation.attributes.product'),
                 'type' => 'select2_multiple',
