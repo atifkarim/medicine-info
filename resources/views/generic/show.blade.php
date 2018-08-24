@@ -2,12 +2,17 @@
     <div class="col-md-12">
         <div class="box box-info">
             <div class="box-header with-border">
-                <h3 class="box-title">{{ trans('validation.attributes.generic') }} :: {{ ucfirst($entity->name) }}</h3>
+                <h3 class="box-title">Search Result</h3>
             </div>
 
             <div class="box-body">
                 <ul class="timeline">
                     <!-- timeline time label -->
+                    <li class="time-label">
+                      <span class="bg-red">
+                        {{ trans('validation.attributes.generic') }} :: {{ ucfirst($entity->name) }}
+                      </span>
+                    </li>
                     <li>
                         <i class="fa fa-circle-o bg-blue"></i>
                         <div class="timeline-item">
