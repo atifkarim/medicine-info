@@ -5,11 +5,11 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Brand;
 use App\Models\Generic;
 use App\Models\Product;
-use App\Models\SubDiseases;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 
 use App\Http\Requests\ProductRequest as StoreRequest;
 use App\Http\Requests\ProductRequest as UpdateRequest;
+use Illuminate\Support\Facades\Input;
 
 class ProductCrudController extends CrudController
 {

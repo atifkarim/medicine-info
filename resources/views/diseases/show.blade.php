@@ -32,7 +32,7 @@
                             <div class="timeline-body">
                                 <ul>
                                     @foreach($entity->products as $key => $product)
-                                        <a href="{{ route('search.index',['type' => 'medicine', 'id' => $product->id]) }}">
+                                        <a href="{{ route('search.product',['id' => $product->id]) }}">
                                             <li>{{ ucfirst($product->medicine_name) }}</li>
                                         </a>
                                     @endforeach

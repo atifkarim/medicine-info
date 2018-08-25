@@ -21,6 +21,21 @@ Route::group([
         'uses' => 'SearchController@index'
     ]);
 
+    Route::get('/search/product', [
+        'as' => 'search.product',
+        'uses' => 'SearchController@productSearch'
+    ]);
+
+    Route::get('/search/generic', [
+        'as' => 'search.generic',
+        'uses' => 'SearchController@genericSearch'
+    ]);
+
+    Route::get('/search/diseases', [
+        'as' => 'search.diseases',
+        'uses' => 'SearchController@diseasesSearch'
+    ]);
+
     Route::get('api/search/entities', [
         'as' => 'search.entitySearch',
         'uses' => 'GlobalSearchController@searchEntities'

@@ -33,4 +33,38 @@ class SearchController extends Controller {
         }
         return view('search.index', compact('entity','type', 'flag', 'products'));
     }
+
+    public function productSearch()
+    {
+        $id = Input::get('id');
+        $products = Product::all();
+        $entity = null;
+        if($id) {
+            $entity = Product::find($id);
+        }
+        return view('product.search',compact('entity', 'products'));
+    }
+
+    public function genericSearch()
+    {
+        $id = Input::get('id');
+        $entity = null;
+        $generics = Generic::all();
+        if($id) {
+            $entity = Generic::find($id);
+            $products = Product::where('generic_id', $id)->get();
+        }
+        return view('generic.search',compact('entity', 'products', 'generics'));
+    }
+
+    public function diseasesSearch()
+    {
+        $id = Input::get('id');
+        $entity = null;
+        $diseases = SubDiseases::all();
+        if($id) {
+            $entity = SubDiseases::find($id);
+        }
+        return view('diseases.search',compact('entity', 'diseases'));
+    }
 }

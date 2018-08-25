@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Generic;
+use App\Models\Product;
 use App\Models\SubDiseases;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 
 use App\Http\Requests\GenericRequest as StoreRequest;
 use App\Http\Requests\GenericRequest as UpdateRequest;
+use Illuminate\Support\Facades\Input;
 
 class GenericCrudController extends CrudController
 {

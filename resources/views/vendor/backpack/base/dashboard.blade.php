@@ -1,28 +1,64 @@
 @extends('backpack::layout')
 
-@section('header')
-    <section class="content-header">
-      <h1>
-        {{ trans('backpack::base.dashboard') }}<small>{{ trans('backpack::base.first_page_you_see') }}</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="{{ backpack_url() }}">{{ config('backpack.base.project_name') }}</a></li>
-        <li class="active">{{ trans('backpack::base.dashboard') }}</li>
-      </ol>
-    </section>
-@endsection
-
-
 @section('content')
     <div class="row">
-        <div class="col-md-12">
-            <div class="box box-default">
-                <div class="box-header with-border">
-                    <div class="box-title">{{ trans('backpack::base.login_status') }}</div>
+        <a href="{{ route('search.index') }}">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-aqua"><i class="fa fa-search"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text"><br></span>
+                        <span class="info-box-number">{{ trans('entity.attributes.search') }}</span>
+                    </div>
+                    <!-- /.info-box-content -->
                 </div>
-
-                <div class="box-body">{{ trans('backpack::base.logged_in') }}</div>
+                <!-- /.info-box -->
             </div>
-        </div>
+        </a>
+        <!-- /.col -->
+        <a href="{{ route('search.product') }}">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-green"><i class="fa fa-bookmark-o"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text"><br></span>
+                        <span class="info-box-number">{{ trans_choice('entity.attributes.medicine',0) }}</span>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div>
+            <!-- /.col -->
+        </a>
+
+        <a href="{{ route('search.generic') }}">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-yellow"><i class="fa fa-files-o"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text"><br></span>
+                        <span class="info-box-number">{{ trans_choice('entity.attributes.generic',0) }}</span>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div>
+            <!-- /.col -->
+        </a>
+
+        <a href="{{ route('search.diseases') }}">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-red"><i class="fa fa-comments-o"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text"><br></span>
+                        <span class="info-box-number">{{ trans_choice('entity.attributes.diseases',0) }}</span>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div>
+            <!-- /.col -->
+        </a>
     </div>
 @endsection

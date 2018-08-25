@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Diseases;
+use App\Models\SubDiseases;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 
 use App\Http\Requests\DiseasesRequest as StoreRequest;
 use App\Http\Requests\DiseasesRequest as UpdateRequest;
+use Illuminate\Support\Facades\Input;
 
 class DiseasesCrudController extends CrudController
 {

@@ -26,7 +26,7 @@
                             <div class="timeline-body">
                                 <ul>
                                     @foreach($entity->sub_diseases as $key => $disease)
-                                        <a href="{{ route('search.index',['type' => 'diseases', 'id' => $disease->id]) }}">
+                                        <a href="{{ route('search.diseases',['id' => $disease->id]) }}">
                                             <li>{{ ucfirst($disease->name) }}</li>
                                         </a>
                                     @endforeach
@@ -74,7 +74,7 @@
                         <tr>
                             <td>{{ ucfirst($product->medicine_name) }}</td>
                             <td>{{ ucfirst($product->brand->name) }}</td>
-                            <td><a href="{{ route('search.index', ['type' => 'medicine', 'id' => $product->id]) }}"><span class="badge bg-blue">View</span></a></td>
+                            <td><a href="{{ route('search.product', ['id' => $product->id]) }}"><span class="badge bg-blue">View</span></a></td>
                         </tr>
                     @endforeach
                     </tbody>
