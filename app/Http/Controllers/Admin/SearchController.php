@@ -37,7 +37,7 @@ class SearchController extends Controller {
     public function productSearch()
     {
         $id = Input::get('id');
-        $products = Product::all();
+        $products = Product::all()->sortBy('name');
         $entity = null;
         if($id) {
             $entity = Product::find($id);
@@ -49,7 +49,7 @@ class SearchController extends Controller {
     {
         $id = Input::get('id');
         $entity = null;
-        $generics = Generic::all();
+        $generics = Generic::all()->sortBy('name');
         if($id) {
             $entity = Generic::find($id);
             $products = Product::where('generic_id', $id)->get();
@@ -61,7 +61,7 @@ class SearchController extends Controller {
     {
         $id = Input::get('id');
         $entity = null;
-        $diseases = SubDiseases::all();
+        $diseases = SubDiseases::all()->sortBy('name');
         if($id) {
             $entity = SubDiseases::find($id);
         }
